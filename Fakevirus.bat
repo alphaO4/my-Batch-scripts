@@ -69,5 +69,5 @@ echo YOU DIDN'T HAD A VIRUS AT ANY POINT, BUT BEWARE THAT THERE ARE MALICIOUS PE
 echo STAY SAFE
 pause
 echo bye
-timeout 1 > NUL
+timeout 3 > NUL
 exit
