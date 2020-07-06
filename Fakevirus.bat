@@ -34,7 +34,7 @@ echo Cleaning immediately necessary
 timeout 1 > NUL
 pause
 title Cleaning...
-color 0a
+color A
 echo Cleaning
 timeout 30 > NUL
 echo Still Cleaning
