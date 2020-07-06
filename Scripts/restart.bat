@@ -1,0 +1,1 @@
+shutdown -t 1 -r
