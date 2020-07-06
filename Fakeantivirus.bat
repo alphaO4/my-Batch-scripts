@@ -6,7 +6,7 @@ color A
 echo Scan has started
 timeout 2 > NUL
 tree 
-timeout 1 > NUL
+timeout 3 > NUL
 cls
 color 7
 echo !   !- - - - - - - - - - - - - - - - - - -!   !
@@ -30,7 +30,7 @@ echo ! O !                                     ! O !
 echo !   !- - - - - - - - - - - - - - - - - - -!   !
 echo No Virus found
 echo No Cleaning necessary
-timeout 1 > NUL
+timeout 3 > NUL
 pause
 timeout 1 > NUL
 exit
