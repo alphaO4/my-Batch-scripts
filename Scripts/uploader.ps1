@@ -6,4 +6,4 @@ $url = https://api.anonfiles.com/upload?token=6e578f0f3525bf07
 
 $r = Invoke-WebRequest -url $url -Method Put -Infile $datapath
  
- print "$r.Content"
+ print "$r"
