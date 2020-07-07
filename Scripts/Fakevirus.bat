@@ -42,25 +42,24 @@ timeout 30 > NUL
 echo Still Cleaning
 timeout 30 > NUL
 echo Done
-//set load=
-//set/a loadnum=0
-//:Cleaning
-//set load=%load%ÛÛ
-//cls
-//echo.
-//echo Cleaning... Please Wait...
-//echo ----------------------------------------
-//echo %load%
-//echo ----------------------------------------
-//ping localhost -n 2 >nul
+rem set load=
+rem set/a loadnum=0
+rem :Cleaning
+rem set load=%load%ÛÛ
+rem cls
+rem echo.
+rem echo Cleaning... Please Wait...
+rem echo ----------------------------------------
+rem echo %load%
+rem echo ----------------------------------------
+rem ping localhost -n 2 >nul
 
-//set/a loadnum=%loadnum% +1
-//if %loadnum%==10 goto Done
+rem set/a loadnum=%loadnum% +1
+rem if %loadnum%==10 goto Done
 
-//goto Cleaning
-//:Done
-//echo.
-//echo Done 
+rem goto Cleaning
+rem :Done
+rem echo.
 echo Thank you for waiting
 timeout 2 > NUL
 cls
