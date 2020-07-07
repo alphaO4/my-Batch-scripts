@@ -42,7 +42,7 @@ timeout 30 > NUL
 echo Still Cleaning
 timeout 30 > NUL
 echo Done
-rem set load=
+rem set load=   
 rem set/a loadnum=0
 rem :Cleaning
 rem set load=%load%ÛÛ
