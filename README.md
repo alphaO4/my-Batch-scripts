@@ -1,4 +1,4 @@
-i will unregulary push some .bat scripts wich I use evry day  
+i will unregulary push some .bat scripts wich I use every day  
 
 All scripts are only meant for educational use. 
 
