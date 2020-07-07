@@ -1,6 +1,6 @@
 @echo off
-set /p size="Enter size:"
+set /p size="Enter size in MB:"
 set /p name="Enter name:"
-set /a MB=  "size * 1048576 "
+set /a MB=  "%size% * 1048576 "
 fsutil file createnew %name%.txt %MB%
 exit
