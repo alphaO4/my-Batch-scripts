@@ -1,4 +1,4 @@
-$datapath1 = "%temp%\testforapi\test"
+$datapath1 = "%User\Desktop\Grap.zip"
 $input1 = "%User%\Desktop\*.pdf,*.docx"
 $input2 = "%User%\Dokuments\*.pdf,*.docx"
 Compress-Archive $input1 $datapath1
