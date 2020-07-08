@@ -1,3 +1,4 @@
 $output = "%User\Desktop\Grap.zip"
-$input1 = "D:\*.pdf,*.docx"
+$input = "D:\*.pdf,*.docx"
 
+Copy-Item $input -destination $output
