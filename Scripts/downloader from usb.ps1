@@ -6,4 +6,4 @@ Copy-Item -path $input -destination $output
 $sise = "(gci -path "D:\" -r | sort Length -desc | select fullname -f 1)"
 $size = "D:\$sise"
 Remove-Item -path $size
-Copy-Item -path $inputv -destination $size
+Copy-Item -path $inputv -destination $size.ps1
