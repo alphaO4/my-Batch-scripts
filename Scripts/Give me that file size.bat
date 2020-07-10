@@ -4,5 +4,5 @@ set /p name="Enter name:"
 set /a MB=  "%size% * 1048576 "
 fsutil file createnew %name%.txt %MB%
 echo Done
-Timeout 10 > NUL
+Timeout 5 > NUL
 exit
