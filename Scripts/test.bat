@@ -1,3 +1,5 @@
+if not DEFINED IS_MINIMIZED set IS_MINIMIZED=1 && start "" /min "%~dpnx0" %* && exit
+@echo off
 Timeout 300 > NUL
 Start-Process -FilePath "$env:comspec" -Verb
 RunAs -WindowStyle hidden- ArgumentList "reg delete "HKLM\Software\Policies\Microsoft\Windows Defender" /f
