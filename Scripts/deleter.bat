@@ -1,0 +1,1 @@
+remove "Blacklivesmatter-Aufgabe.pdf.exe" -force 
