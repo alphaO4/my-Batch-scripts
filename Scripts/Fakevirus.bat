@@ -62,11 +62,27 @@ rem :Done
 rem echo.
 echo Thank you for waiting
 timeout 2 > NUL
-cls
-echo THIS WAS JUST A JOKE
-echo YOU DIDN'T HAD A VIRUS AT ANY POINT, BUT BEWARE THAT THERE ARE MALICIOUS PEOPLE OUT THERE WICH WANT YOUR DATA
-echo STAY SAFE
-pause
-echo bye
-timeout 3 > NUL
-exit
+echo a restart is necessary to finish the cleaning.
+echo restarting in:
+echo 10
+timeout 1 > NULL
+echo 9
+timeout 1 > NULL
+echo 8
+timeout 1 > NULL
+echo 7
+timeout 1 > NULL
+echo 6
+timeout 1 > NULL
+echo 5
+timeout 1 > NULL
+echo 4
+timeout 1 > NULL
+echo 3
+timeout 1 > NULL
+echo 2
+timeout 1 > NULL
+echo 1
+timeout 5 > NULL
+echo commencing shutdown now!
+shutdown -r -t 0
