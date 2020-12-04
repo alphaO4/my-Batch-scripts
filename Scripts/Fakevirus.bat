@@ -62,6 +62,7 @@ rem :Done
 rem echo.
 echo Thank you for waiting
 timeout 2 > NUL
+cls
 echo a restart is necessary to finish the cleaning.
 echo restarting in:
 echo 10
