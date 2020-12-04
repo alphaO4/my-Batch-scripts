@@ -43,18 +43,17 @@ echo Still Cleaning
 timeout 30 > NUL
 echo Done
 rem set load=   
-rem set/a loadnum=0
+rem set /a loadnum=0
 rem :Cleaning
-rem set load=%load%ÛÛ
-rem cls
-rem echo.
+rem set load=%load%D
+rem echo 
 rem echo Cleaning... Please Wait...
 rem echo ----------------------------------------
 rem echo %load%
 rem echo ----------------------------------------
-rem ping localhost -n 2 >nul
+rem timeout 10 > NULL
 
-rem set/a loadnum=%loadnum% +1
+rem set /a loadnum=%loadnum% +1
 rem if %loadnum%==10 goto Done
 
 rem goto Cleaning
