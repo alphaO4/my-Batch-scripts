@@ -1,5 +1,11 @@
 #disable events
 events.stream off
+clear
+!echo "Setting up your Session"
+
+#sleeping for show
+sleep 2
+clear
 
 #set wifi.interface to the correct interface
 set wifi.interface wlan1
@@ -12,5 +18,7 @@ set wifi.handshake.aggregate false
 set wifi.region DE
 wifi.recon on
 
-#show the current known network
-net.show
+#set ticker to show wifi networks/ known hosts in eth network  every 5 seconds
+set ticker.period 10
+set ticker.commands clear;wifi.show;net.show
+ticker on
