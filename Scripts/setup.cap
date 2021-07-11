@@ -1,16 +1,16 @@
+#disable events
+events.stream off
+
 #set wifi.interface to the correct interface
 set wifi.interface wlan1
-sleep1
 
 #set the handshake folder to /home/pi/hs
 set wifi.handshake.file /home/pi/hs
 set wifi.handshake.aggregate false
-sleep 1
 
 #prepare wifi hacking
-wifi.region DE
+set wifi.region DE
 wifi.recon on
-events.stream off
 
-#activate web-interface
-https-ui
+#show the current known network
+net.show
