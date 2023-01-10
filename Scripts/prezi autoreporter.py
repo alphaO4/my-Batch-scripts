@@ -7,17 +7,17 @@ import sys
 
 #This is a simple autoreporter sending dozens of reports about one prezi
 #--------------------
-url = 'https://prezi.com/contact/abuse/submit'
 prezi_id = input('The prezi_ID to mass report: ') 
+url = 'https://prezi.com/contact/abuse/'+ prezi_id +'/submit/'
 API = 'https://www.1secmail.com/api/v1/'
 domainList = ['1secmail.com', '1secmail.net', '1secmail.org', 'wwjmp.com', 'esiix.com', 'xojxe.com', 'yoggm.com']
 domain =random.choice(domainList)
 u_name = ''.join(random.choices(string.ascii_letters + string.digits, k=10))
-print("Mass reporting Prezi with ID " + prezi_id)
+print("Mass reporting Prezi with URL " + url)
 client = requests.session()
 #--------------------
 
-client.get(url)
+client.get('https://prezi.com/')
 if 'csrfmiddlewaretoken' in client.cookies:
     csrftoken = client.cookies['csrfmiddlewaretoken']
 else:
@@ -39,7 +39,7 @@ email = email_creation(rndm)
 body = {
     'csrfmiddlewaretoken': csrftoken,
     'category':'abuse_spam',
-    'prezi_link': prezi_id,
+    'prezi_link': url,
     'description':'This prezi is, to my best knowledge, just spam and does not deserve to be on this site',
     'evidence':'',
     'company_name':'',
